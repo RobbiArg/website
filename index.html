@@ -3,40 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog Personal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CUENTOS</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: "Liberation Sans", Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #080808;
+            color: #ececec;
+            display: grid;
+            place-items: center;
+        }
+
+        main {
+            width: min(92%, 780px);
+            border: 1px solid #4a4a4a;
+            background: #101010;
+            padding: 24px;
+        }
+
+        .base-box {
+            display: block;
+            text-decoration: none;
+            color: #f4f4f4;
+            border: 1px solid #676767;
+            background: #161616;
+            padding: 18px;
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            transition: background 0.2s ease;
+        }
+
+        .base-box:hover,
+        .base-box:focus-visible {
+            background: #202020;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Mi Blog</h1>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <button id="theme-toggle">🌙 Modo Oscuro</button>
-            </nav>
-        </div>
-    </header>
-
     <main>
-        <article class="post-card">
-            <h2><a href="post.html">La dinámica de dos gatos hermanos</a></h2>
-            <p class="date">27 de abril, 2026</p>
-            <p class="excerpt">(blanca, gris y naranja)...</p>
-            <a href="post.html" class="read-more">Leer artículo completo &rarr;</a>
-        </article>
-
-        <article class="post-card">
-            <h2><a href="#">Apuntes sobre métricas de proyectos</a></h2>
-            <p class="date">20 de abril, 2026</p>
-            <p class="excerpt">Un pequeño resumen sobre cuándo utilizar VAN, TIR y Payback al evaluar la viabilidad financiera de una idea de software...</p>
-            <a href="#" class="read-more">Leer artículo completo &rarr;</a>
-        </article>
+        <a class="base-box" href="post.html">La carta en el buzón rojo</a>
+        <a class="base-box" href="cuento-linterna.html">La linterna del pasillo</a>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Mi Blog Personal.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
