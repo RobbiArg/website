@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La carta en el buzón rojo</title>
+    <title>Plantilla de cuento</title>
     <style>
         :root {
             color-scheme: dark;
@@ -30,83 +30,27 @@
             padding: 24px;
         }
 
-        .header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 14px;
-        }
-
         h1 {
-            margin: 0;
-            font-size: 1.7rem;
+            margin: 0 0 10px;
+            font-size: 1.6rem;
         }
 
         p {
-            margin: 0 0 12px;
-            line-height: 1.6;
+            margin: 0 0 10px;
             color: #d8d8d8;
+            line-height: 1.5;
         }
 
-        .back {
-            display: inline-block;
-            text-decoration: none;
-            color: #f3f3f3;
-            border: 1px solid #676767;
-            background: #161616;
-            padding: 10px 14px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.2s ease, background 0.2s ease;
-        }
-
-        body.show-back .back,
-        .back:focus-visible {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .back:hover,
-        .back:focus-visible {
-            background: #202020;
+        code {
+            color: #f4f4f4;
         }
     </style>
 </head>
 <body>
     <main>
-        <div class="header-row">
-            <h1>La carta en el buzón rojo</h1>
-            <a class="back" href="index.html">Volver al inicio</a>
-        </div>
-        <p>
-            El pueblo dormía temprano, pero esa noche Inés escuchó el golpecito metálico
-            del buzón de la esquina. Bajó con una bufanda fina y encontró un sobre gris,
-            sin nombre ni estampilla, doblado con paciencia.
-        </p>
-        <p>
-            Dentro solo había una frase: "No abras la puerta a las tres". Miró el reloj
-            de la farmacia: marcaba las dos y cuarenta y seis. De regreso, cada escalón
-            de madera pareció responderle con un crujido nuevo.
-        </p>
-        <p>
-            A las tres en punto sonaron tres golpes suaves. Inés no abrió. Esperó, con
-            la carta apretada en la mano, hasta que el amanecer pintó de azul los vidrios.
-            En el piso, del otro lado de la puerta, encontró otro sobre: "Gracias".
-        </p>
+        <h1>Plantilla para nuevos cuentos</h1>
+        <p>Los cuentos ahora van en la carpeta <code>cuentos/</code>.</p>
+        <p>Duplica un archivo de esa carpeta para cargar un cuento nuevo en el futuro.</p>
     </main>
 </body>
-<script>
-    const body = document.body;
-    let hideTimer;
-
-    function showBackButtonTemporarily() {
-        body.classList.add("show-back");
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(() => {
-            body.classList.remove("show-back");
-        }, 700);
-    }
-
-    window.addEventListener("mousemove", showBackButtonTemporarily);
-</script>
 </html>
